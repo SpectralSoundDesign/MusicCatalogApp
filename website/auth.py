@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 from asyncio.windows_events import NULL
+=======
+>>>>>>> f359d6af7bb635398222ae5134030f00ffa83cb4
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from .models import MusicCatalog, User
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -70,6 +73,7 @@ def sign_up():
 @auth.route('/catalog', methods=['GET', 'POST'])
 @login_required
 def catalog():
+<<<<<<< HEAD
     search_value = request.form.get('search_string')
     search = "%{}%".format(search_value)
     results = MusicCatalog.query.filter(MusicCatalog.pieceName.like(search)).all()
@@ -80,3 +84,9 @@ def catalog():
     
 
     
+=======
+    show_piece = MusicCatalog.query.order_by(MusicCatalog.user_id)
+
+    return render_template("music_catalog.html", user=current_user, show_piece=show_piece)
+
+>>>>>>> f359d6af7bb635398222ae5134030f00ffa83cb4

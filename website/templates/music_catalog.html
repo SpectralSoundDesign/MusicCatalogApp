@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block title %}Music Catalog{% endblock %}
 
 {% block content %}
+<<<<<<< HEAD
 
 <form method="POST">
   <input type="text" autofocus="autofocus" name="search_string">
@@ -14,6 +15,12 @@
         
   
     
+=======
+<ul class="list-group">
+
+  {% for piece in show_piece %}
+  {% if current_user.id == piece.user_id %}
+>>>>>>> f359d6af7bb635398222ae5134030f00ffa83cb4
   <li class="list-group-item list-group-item-action">
 
     <div class="d-flex w-100 justify-content-between">
@@ -22,6 +29,7 @@
     </div>
     <p class="mb-1">{{piece.composerName}}</p>
     <small>{{piece.note_data}}</small>
+<<<<<<< HEAD
   </li>{% endif %}
   {% endfor %}
 
@@ -30,6 +38,14 @@
 </ul>
 
 
+=======
+  </li>
+  
+
+</ul>
+{% endif %}
+{% endfor %}
+>>>>>>> f359d6af7bb635398222ae5134030f00ffa83cb4
 
 
 {% endblock %}
