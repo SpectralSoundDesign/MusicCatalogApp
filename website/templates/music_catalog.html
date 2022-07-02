@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %}Music Catalog{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+  <input type="text" autofocus="autofocus" name="search_string">
+  <input type="submit" formaction="/catalog" name="Search">
+
+</form>
+
+<ul class="list-group">
+  {% for piece in results %}
+        {% if current_user.id == piece.user_id %}
+        
+  
+    
+  <li class="list-group-item list-group-item-action">
+
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{piece.pieceName}}</h5>
+      <small>{{piece.pieceDate}}</small>
+    </div>
+    <p class="mb-1">{{piece.composerName}}</p>
+    <small>{{piece.note_data}}</small>
+  </li>{% endif %}
+  {% endfor %}
+
+  
+
+</ul>
+
+
+
+
+{% endblock %}
