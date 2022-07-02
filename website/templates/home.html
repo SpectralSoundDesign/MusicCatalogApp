@@ -1,29 +1,31 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %}
 
 {% block content %}
+<br>
 <form method="POST">
     <h3 align="center">Add to Catalog</h3>
     <div class="form-group">
         <label for="composerName">Name of Composer(s)</label>
-        <input type="composerName" class="form-control" id="composerName" name="composerName"
+        <input style="background-color:rgb(206, 206, 206)" type="composerName" class="form-control" id="composerName" name="composerName"
             placeholder="Enter name of composer(s)" />
     </div>
 
     <div class="form-group">
         <label for="pieceName">Piece Name</label>
-        <input type="pieceName" class="form-control" id="pieceName" name="pieceName"
+        <input style="background-color:rgb(206, 206, 206)" type="pieceName" class="form-control" id="pieceName" name="pieceName"
             placeholder="Enter name of piece" />
     </div>
 
     <div class="form-group">
         <label for="pieceDate">Date of Piece</label>
-        <input type="pieceDate" class="form-control" id="pieceDate" name="pieceDate"
+        <input style="background-color:rgb(206, 206, 206)" type="pieceDate" class="form-control" id="pieceDate" name="pieceDate"
             placeholder="Enter date that piece was composer" />
     </div>
 
     <h3 align="center">Notes</h3>
+    <br>
     <div class="form-group">
-        <input type="note_data" class="form-control" id="note_data" name="note_data" placeholder="Enter notes" />
+        <input style="background-color:rgb(206, 206, 206)" type="note_data" class="form-control" id="note_data" name="note_data" placeholder="Enter notes" />
     </div>
     <br />
     <button type="submit" class="btn btn-primary">Submit</button>
